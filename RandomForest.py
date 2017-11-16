@@ -45,6 +45,7 @@ print(test['species'].head())
 pd.crosstab(test['species'], preds, rownames=['Actual Species'], colnames=['Predict Species'])
 print(pd.crosstab(test['species'], preds, rownames=['Actual Species'], colnames=['Predict Species']))
 
-
+list(zip(train[features], clf.feature_importances_))
+print(list(zip(train[features], clf.feature_importances_)))
 
 
