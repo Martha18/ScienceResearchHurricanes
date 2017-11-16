@@ -33,11 +33,9 @@ print(clf.fit(train[features], y))
 clf.predict(test[features])
 print(clf.predict(test[features]))
 
-clf.predict_proba(test[features])[0:10]
 print(clf.predict_proba(test[features])[0:10])
 
 preds = iris.target_names[clf.predict(test[features])]
-preds[0:5]
 print(preds[0:5])
 
 print(test['species'].head())
@@ -47,5 +45,3 @@ print(pd.crosstab(test['species'], preds, rownames=['Actual Species'], colnames=
 
 list(zip(train[features], clf.feature_importances_))
 print(list(zip(train[features], clf.feature_importances_)))
-
-
